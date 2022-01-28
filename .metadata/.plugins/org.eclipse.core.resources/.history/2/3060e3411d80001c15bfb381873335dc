@@ -1,0 +1,5 @@
+package com.mouritech.manytomanyexample.dao;
+
+public class ItemsDao {
+
+}

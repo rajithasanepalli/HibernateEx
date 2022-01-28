@@ -1,0 +1,5 @@
+package com.mouritech.hibernateex.entity;
+
+public class Employee {
+
+}

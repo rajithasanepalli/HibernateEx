@@ -1,0 +1,5 @@
+package com.mouritech.onetooneexample.util;
+
+public class HibernateUtil {
+
+}

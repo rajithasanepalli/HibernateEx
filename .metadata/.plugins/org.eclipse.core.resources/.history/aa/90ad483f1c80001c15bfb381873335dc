@@ -1,0 +1,5 @@
+package com.mouritech.manytomanyexample.util;
+
+public class HibernateUtil {
+
+}

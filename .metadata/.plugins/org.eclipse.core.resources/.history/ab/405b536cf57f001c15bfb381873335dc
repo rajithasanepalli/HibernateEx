@@ -1,0 +1,5 @@
+package com.mouritech.onetooneexample.model;
+
+public class Stock_Details {
+
+}

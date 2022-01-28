@@ -1,0 +1,38 @@
+package com.mouritech.queriesoncustomer;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.mouritech.hibernateex.entity.Customer;
+
+public class SelectQuery {
+	@SuppressWarnings("deprecation")
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Configuration cfg = new Configuration();
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sFactory = cfg.buildSessionFactory();
+		Session session = sFactory.openSession();
+		Transaction tx = session.beginTransaction();
+		@SuppressWarnings("unchecked")
+		Query<Customer> selectQuery = session.createQuery
+				("from Customer where customername = :name");//here persistent class is Product
+
+		
+		selectQuery.setParameter("name", "Keerthi");
+
+		int selectStatus = selectQuery.executeUpdate()();
+		System.out.println(selectStatus);
+		
+		tx.commit();
+		
+		
+		sFactory.close();
+		session.close();
+	}
+
+}
