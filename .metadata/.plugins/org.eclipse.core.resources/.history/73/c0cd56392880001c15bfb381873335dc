@@ -51,9 +51,7 @@ public class ManyToManyExample {
 				odao.saveOrders(ord1);
 				
 				
-				ItemsDao idao = new ItemsDao();
-				idao.saveItems(item);
-				idao.saveItems(item1);
+				
 				
 
 			}

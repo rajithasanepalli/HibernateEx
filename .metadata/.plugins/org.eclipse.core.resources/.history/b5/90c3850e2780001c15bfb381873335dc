@@ -16,7 +16,7 @@ public class OrdersDao {
 			// save the employee object in to database
 			session.save(ordrs);
 			// commit transaction
-			//transaction.commit();
+			transaction.commit();
 		}catch (Exception e) {
 			if (transaction != null) {
 				transaction.rollback();
